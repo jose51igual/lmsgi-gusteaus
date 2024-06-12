@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Reservas Gusteau's</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="imgs/favicon.png">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">Reservas Gusteau's</div>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#sobrenosotros">Sobre Nosotros</a></li>
+            <li><a href="menuEstrella.html">Menú</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <form action="#reserva.php" method="post">
+
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre:</label>
+            <span class="required-indicador">*</span>
+            <input type="text" id="nombre" name="nombre" maxlength="50" required>
+            
+
+            <label for="email">Correo Electrónico:</label>
+            <span class="required-indicador">*</span>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <span class="required-indicador">*</span>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]+" required>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Reserva</legend>
+            <label for="numero_personas">Número de Personas:</label>
+            <span class="required-indicador">*</span>
+            <input type="number" id="numero_personas" name="numero_personas" min="1" required>
+
+            <label for="fecha_hora">Fecha y Hora:</label>
+            <span class="required-indicador">*</span>
+            <input type="datetime-local" id="fecha_hora" name="fecha_hora" content="    " required>
+
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" maxlength="200"></textarea>
+        </fieldset>
+
+
+        <button type="submit">Reservar Mesa</button>
+    </form>
+    <div class="pie">
+        <div class="enlacespie">
+            <a href="#">Sobre nosotros</a>
+            <a href="menuEstrella.html">Menu</a>
+            <a href="#">Contacto</a>
+            <a href="#">Términos y condiciones</a>
+        </div>
+        © 2024 Restaurante Gusteau's - París, Francia
+    </div>
+
+</body>
+
+</html>
